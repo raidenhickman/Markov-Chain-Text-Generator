@@ -8,7 +8,7 @@ valid = {}
 output_text = ""
 
 print("Please pick from one of the following training data files contained in the data folder. Add your own and run the program again to include alternative data.\n\n" + "\n".join(files))
-print("\nNote: The longer the file, the longer it will take; the selected file is read every time the program is started to facilitate inserting your own files.")
+print("To add your own file, put it in the Data folder, run textstrip.py with the name of the new file (only needs to be done the first time), and then rerun this program.")
 filename = input("Type one of the above file names: ")
 
 openfile = open(".\\data\\" + filename, "r", encoding = "utf8")
