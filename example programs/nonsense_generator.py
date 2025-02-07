@@ -7,6 +7,7 @@ Example file using trainer.py to generate nonsense text based on the source text
 Default data is clean, but when used with punctuation and capitalisation it works just as well and looks more like realistic sentences.
 '''
 
+dashes = "-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-"
 genwords = 100
 
 # trainer.py start
@@ -28,7 +29,7 @@ for file in files:
 # trainer.py end
 
 def startgen():
-    return random.choice(list(valid.keys()))
+    return random.choice(list(valid.keys())) # return a random valid key
 
 def generatetext():
     text = startgen().split()
@@ -36,13 +37,14 @@ def generatetext():
     for i in range(0, genwords):
         key = " ".join(text[-2:])
         if key in valid:
-            text.append(random.choice(valid[key]))
+            text.append(random.choice(valid[key])) # if the key is valid: add a random word that comes after it to the text
         else:
-            text.extend(startgen().split())  # Use extend() instead of append()
+            text.extend(startgen().split()) # if the key is not valid: add a random valid key to the text
     
-    print(" ".join(text))
+    print(" ".join(text)) # print the text in a readable format
 
-while True:
+while True: # allows generating text repeatedly
+    print(dashes)
     generatetext()
     keepgoing = input()
     if keepgoing != "":
