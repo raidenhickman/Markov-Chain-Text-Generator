@@ -3,6 +3,8 @@ import os
 '''
 This is a base for word based Markov chains that I made.
 It uses every file in the Data folder to create a dictionary of words which can then be used to generate output text.
+Essentially, include more files with more text to be more accurate. Make sure files are sanitised with textstrip.py first!
+
 Alter the depth variable to make the dictionary include more words as the key. This will make the outputs closer to the source text.
 '''
 
