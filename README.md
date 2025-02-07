@@ -13,4 +13,4 @@ Included In This Project
   1984 by George Orwell, from Project Gutenberg
   Dracula by Bram Stoker, from Project Gutenberg
   Moby Dick by Herman Melville, from Project Gutenberg
-  The Bible
+  The Bible from https://github.com/gratis-bible/bible
