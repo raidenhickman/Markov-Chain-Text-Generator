@@ -6,7 +6,7 @@ genwords is how many words in the future to predict.
 '''
 
 dashes = "-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-+-=-"
-genwords = 1
+genwords = 5
 
 # trainer.py start
 files = os.listdir('.\\data')
@@ -28,8 +28,8 @@ for file in files:
 
 while True: # repeat until theres an error or it's shut off
     print(dashes)
-    autocomplete = input("Input text to autocomplete based on the data: ") 
     loops = 0
+    autocomplete = input("Input text to autocomplete based on the data: ") 
     for i in range(0, genwords):
         autocomplete = " ".join(autocomplete.split()[-depth:]) # the "autocomplete" variable is set to the last words of itself, matching the depth.
         if autocomplete not in valid.keys() and loops == 0:
