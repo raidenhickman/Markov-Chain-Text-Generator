@@ -1,5 +1,10 @@
 Markov Chain Text Generators
 
+!!!
+To work correctly, the program must be in the same folder as a folder named "Data", containing only text documents. Sample data folder included.
+!!!
+
+
 Included In This Project
 - A text stripper. Strips text of all punctuation, indentation, and newline characters. Makes all text lowercase.
   Not essential to the function of the project, but useful for making outputs look generally nicer.
